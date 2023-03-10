@@ -114,7 +114,7 @@ class _CasaIniState extends State<CasaIni> {
                         style: TextStyle(
                           color: game.tablero![index] == "X"
                               ? Colors.blue
-                              : Colors.pink,
+                              : Colors.orange,
                           fontSize: 60,
                         ),
                       )),
