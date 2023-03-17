@@ -94,10 +94,11 @@ class _CasaIniState extends State<CasaIni> {
                                   resultado = "Hay un empate!";
                                   juegoTerminado = true;
                                 }
-                                if (valor == "X")
+                                if (valor == "X") {
                                   valor = "O";
-                                else
+                                } else {
                                   valor = "X";
+                                }
                               });
                             }
                           },
@@ -136,6 +137,7 @@ class _CasaIniState extends State<CasaIni> {
                 // lo reiniciaremos tambien.
                 valor = "X";
                 turno = 0;
+                juegoTerminado = false;
                 resultado = "";
                 puntajeboard = [0, 0, 0, 0, 0, 0, 0, 0];
               });
@@ -180,7 +182,7 @@ class Game {
     int col = index % 3;
     int punt = player == "X" ? 1 : -1;
 
-    puntajeboard[row] + punt;
+    puntajeboard[row] += punt;
     // += sirve para sumar la variable misma más otra.
     // += a = a + b
     puntajeboard[tamanogrid + col] += punt;
